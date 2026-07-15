@@ -111,39 +111,7 @@ termInput.addEventListener('keydown', (e) => {
         termOutput.scrollTop = termOutput.scrollHeight;
     }
 });
-// --- JavaScript Code Runner Logic ---
-const runBtn = document.getElementById('runCodeBtn');
-const consoleOutputText = document.getElementById('consoleOutputText');
 
-runBtn.addEventListener('click', () => {
-    const userCode = textarea.value;
-    consoleOutputText.innerHTML = ""; // Clear output
-
-    // Capture user console.log actions
-    let logs = [];
-    const customConsole = {
-        log: (...args) => {
-            logs.push(args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : arg).join(' '));
-        },
-        error: (...args) => {
-            logs.push(`<span style="color: #ef4444;">Error: ${args.join(' ')}</span>`);
-        }
-    };
-
-    try {
-        // Run the code safely by wrapping it in a function with our custom console
-        const runner = new Function('console', userCode);
-        runner(customConsole);
-        
-        if (logs.length === 0) {
-            consoleOutputText.innerHTML = "<span style='color: var(--text-muted);'>Code executed successfully, but nothing was printed to console.log().</span>";
-        } else {
-            consoleOutputText.innerHTML = logs.join('<br>');
-        }
-    } catch (err) {
-        consoleOutputText.innerHTML = `<span style="color: #ef4444;">Runtime Error: ${err.message}</span>`;
-    }
-});
 // --- Sliding Drawer Navigation & Accordion Logic ---
 const menuBtn = document.getElementById('menuBtn');
 const closeBtn = document.getElementById('closeBtn');
