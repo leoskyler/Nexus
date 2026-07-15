@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Nexus | Developer Sandbox</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Linking our external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Dynamic Backgrounds -->
+    <div class="aurora-bg"></div>
+    <div class="grid-overlay"></div>
+
+    <div class="container">
+        
+        <!-- Left Side: Profile Card -->
+        <div class="panel profile-header">
+            <div class="avatar-container">
+                <div class="avatar-glow"></div>
+                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80" alt="I.T Developer Profile">
+            </div>
+
+            <div>
+                <h1>Your Name</h1>
+                <p class="role-tag" style="margin-top: 0.5rem; display: inline-block;">I.T DEVELOPER</p>
+            </div>
+
+            <p class="bio">
+                An ambitious, forward-thinking I.T Developer specializing in full-stack web applications, custom software designs, and modern web architectures. Transforming creative abstract concepts into responsive, production-ready systems.
+            </p>
+
+            <div class="social-grid">
+                <a href="https://github.com/leoskyler" target="_blank" class="social-btn">🐙 GitHub</a>
+                <a href="#" class="social-btn">🔗 LinkedIn</a>
+            </div>
+        </div>
+
+        <!-- Right Side: Interactive Sandbox -->
+        <div class="workspace">
+            
+            <!-- Idea Core -->
+            <div class="panel core-container">
+                <div class="idea-sphere" id="sphere">
+                    <span class="sphere-text">SPARK</span>
+                </div>
+                
+                <div class="idea-board" id="ideaBoard">
+                    <div class="idea-title">The Idea Nexus</div>
+                    <div class="idea-body" id="ideaText">Tap the core sphere above to ignite a brand-new software project idea or creative challenge.</div>
+                </div>
+            </div>
+
+            <!-- Interactive Workspace Tabs -->
+            <div class="workspace-tabs">
+                <button class="tab-btn active" onclick="switchTab('terminal')">Terminal</button>
+                <button class="tab-btn" onclick="switchTab('editor')">Code Editor</button>
+            </div>
+
+            <!-- Dynamic Screens Container -->
+            <div class="workspace-panel-container">
+                
+                <!-- Terminal Screen -->
+                <div class="terminal" id="terminalTab">
+                    <div class="terminal-header">
+                        <div class="header-dots">
+                            <div class="terminal-dot dot-red"></div>
+                            <div class="terminal-dot dot-yellow"></div>
+                            <div class="terminal-dot dot-green"></div>
+                        </div>
+                        <span style="color: var(--text-muted); font-size: 0.75rem;">sandbox@nexus:~ (terminal)</span>
+                    </div>
+                    <div class="terminal-output" id="terminalOutput">
+                        <div>Welcome to the Sandbox Console.</div>
+                        <div style="color: var(--text-muted);">Type "help" to see what commands you can execute.</div>
+                        <div class="terminal-row">
+                            <span class="prompt-symbol">nexus$</span>
+                            <input type="text" class="terminal-input" id="terminalInput" placeholder="..." autofocus autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Non-Executable Code Editor Screen -->
+                <div class="code-editor-container hidden" id="editorTab">
+                    <div class="editor-header">
+                        <div class="header-dots">
+                            <div class="terminal-dot dot-red"></div>
+                            <div class="terminal-dot dot-yellow"></div>
+                            <div class="terminal-dot dot-green"></div>
+                        </div>
+                        <div>
+                            <select class="lang-select" id="langSelect">
+                                <option value="javascript">JavaScript</option>
+                                <option value="python">Python</option>
+                                <option value="html">HTML</option>
+                                <option value="cpp">C++</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="code-editor-wrapper">
+                        <div class="line-numbers" id="lineNums">
+                            1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9
+                        </div>
+                        <textarea class="editor-textarea" id="codeEditor" placeholder="// Write any code here... (Does not execute)" spellcheck="false"></textarea>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Linking our external JS logic file -->
+    <script src="script.js"></script>
+</body>
+</html>
