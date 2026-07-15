@@ -10,6 +10,68 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button class="menu-btn" id="menuBtn" aria-label="Open Navigation Menu">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+    </button>
+
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        
+        <div class="sidebar-title">NAVIGATION</div>
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>👤 About Developer</span>
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-inner">
+                        <strong style="color: var(--secondary);">Developer:</strong> Leoskyler
+                        <br><br>
+                        <p style="font-size: 0.85rem; line-height: 1.5; color: var(--text-muted);">
+                            Leoskyler is a passionate and versatile Information Technology (I.T.) developer with expertise across multiple areas of technology, including software development, web and mobile application development, networking, cybersecurity, cloud computing, database management, hardware maintenance, and technical support. I enjoy designing innovative digital solutions, solving complex technical problems, and helping individuals and organizations leverage technology effectively. With a commitment to continuous learning and staying up to date with emerging technologies, I strive to deliver secure, reliable, and high-quality I.T. solutions that drive efficiency, productivity, and innovation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>🚀 Projects</span>
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-inner">
+                        <div class="project-link-card">
+                            <strong style="color: var(--accent);">PROJECT 1:</strong>
+                            <div style="font-size: 0.9rem; margin-top: 4px; font-weight: bold;">SAGE AI</div>
+                            <a href="https://leoskyler.github.io/SAGE-AI/" target="_blank" class="sidebar-link-btn">Launch SAGE AI ⚡</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>💬 Get In Touch</span>
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-inner social-links-vertical">
+                        <a href="https://wa.me/qr/GMYQNX3FWE73D1" target="_blank" class="social-link-item">🟢 WhatsApp</a>
+                        <a href="https://www.instagram.com/leoskyler_4?igsh=Z2EyYnp5Z2xvdmt2" target="_blank" class="social-link-item">📸 Instagram</a>
+                        <a href="https://www.facebook.com/leo.skyler.2025" target="_blank" class="social-link-item">🔵 Facebook</a>
+                        <a href="https://x.com/leoskyler7" target="_blank" class="social-link-item">🐦 X / Twitter</a>
+                        <a href="https://www.threads.com/@leoskyler_4" target="_blank" class="social-link-item">🧵 Threads</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
     <!-- Dynamic Backgrounds -->
     <div class="aurora-bg"></div>
