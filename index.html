@@ -84,7 +84,34 @@
                 </div>
 
                 <!-- Non-Executable Code Editor Screen -->
+                                <!-- Interactive Code Editor Screen -->
                 <div class="code-editor-container hidden" id="editorTab">
+                    <div class="editor-header">
+                        <div class="header-dots">
+                            <div class="terminal-dot dot-red"></div>
+                            <div class="terminal-dot dot-yellow"></div>
+                            <div class="terminal-dot dot-green"></div>
+                        </div>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <select class="lang-select" id="langSelect">
+                                <option value="javascript">JavaScript</option>
+                            </select>
+                            <button class="run-btn" id="runCodeBtn">▶ Run Code</button>
+                        </div>
+                    </div>
+                    <div class="code-editor-wrapper">
+                        <div class="line-numbers" id="lineNums">
+                            1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9
+                        </div>
+                        <textarea class="editor-textarea" id="codeEditor" placeholder="// Write JS here! e.g., console.log('Hello World!');" spellcheck="false"></textarea>
+                    </div>
+                    <!-- Editor Console Output Area -->
+                    <div class="editor-console" id="editorConsole">
+                        <div style="color: var(--text-muted); border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px; margin-bottom: 4px;">Console Output:</div>
+                        <div id="consoleOutputText" style="color: #34d399;">Ready...</div>
+                    </div>
+                </div>
+
                     <div class="editor-header">
                         <div class="header-dots">
                             <div class="terminal-dot dot-red"></div>
