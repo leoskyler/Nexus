@@ -144,3 +144,54 @@ runBtn.addEventListener('click', () => {
         consoleOutputText.innerHTML = `<span style="color: #ef4444;">Runtime Error: ${err.message}</span>`;
     }
 });
+// --- Sliding Drawer Navigation & Accordion Logic ---
+const menuBtn = document.getElementById('menuBtn');
+const closeBtn = document.getElementById('closeBtn');
+const sidebar = document.getElementById('sidebar');
+const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+// Open Sidebar
+menuBtn.addEventListener('click', () => {
+    sidebar.classList.add('open');
+    sidebarOverlay.classList.add('visible');
+});
+
+// Close Sidebar via Close Button
+closeBtn.addEventListener('click', () => {
+    sidebar.classList.remove('open');
+    sidebarOverlay.classList.remove('visible');
+});
+
+// Close Sidebar by tapping on background overlay
+sidebarOverlay.addEventListener('click', () => {
+    sidebar.classList.remove('open');
+    sidebarOverlay.classList.remove('visible');
+});
+
+// Accordion Expanding/Collapsing Logic
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const content = item.querySelector('.accordion-content');
+        const isActive = item.classList.contains('active');
+
+        // Close all other active sections (optional, clean UX)
+        document.querySelectorAll('.accordion-item').forEach(otherItem => {
+            if (otherItem !== item) {
+                otherItem.classList.remove('active');
+                otherItem.querySelector('.accordion-content').style.maxHeight = null;
+            }
+        });
+
+        // Toggle self
+        if (isActive) {
+            item.classList.remove('active');
+            content.style.maxHeight = null;
+        } else {
+            item.classList.add('active');
+            content.style.maxHeight = content.scrollHeight + "px"; // Expand accurately based on inner content height
+        }
+    });
+});
