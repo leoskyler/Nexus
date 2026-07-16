@@ -637,3 +637,19 @@ h1 {
     visibility: visible;
 }
 
+/* Multi-Color Sidebar Button Glow Upgrades */
+.sidebar-link-btn[style*="background: var(--accent)"]:hover {
+    box-shadow: 0 0 12px rgba(236, 72, 153, 0.5);
+    transform: translateY(-1px);
+}
+
+.sidebar-link-btn[style*="background: #00e676"]:hover {
+    box-shadow: 0 0 12px rgba(0, 230, 118, 0.5);
+    transform: translateY(-1px);
+}
+
+.sidebar-link-btn[style*="background: rgba(255,255,255,0.1)"]:hover {
+    background: rgba(255,255,255,0.2) !important;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
