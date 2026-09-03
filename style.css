@@ -661,3 +661,7 @@ h1 {
     box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
     transform: translateY(-1px);
 }
+.sidebar-link-btn[style*="background: #10b981"]:hover {
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.5);
+    transform: translateY(-1px);
+}
